@@ -13,6 +13,32 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
 		<!-- Printing and PDF exports -->
+		<style>
+			quote {
+				font-size: 2em;
+			}
+
+			li {
+				margin-bottom: 20px !important;
+			}
+
+			.nested-list {
+				list-style-type: none !important;
+				list-style-image: none;
+				margin: 0 !important;
+				padding: 0 !important;
+			}
+
+			.nested-list h3 {
+				text-decoration: underline;
+				font-size: 100%;
+			}
+
+			.nested-list ul {
+				list-style-type: none !important;
+				list-style-image: none !important;
+			}
+		</style>
 		<script>
 			var link = document.createElement( 'link' );
 			link.rel = 'stylesheet';
@@ -24,8 +50,356 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<h1>Designing an app</h1>
+					<p><small>Jake LaCombe</small></p>
+				</section>
+				<section>
+					<section>
+						<h1>Your Situation</h1>
+						<p>So you have an app idea, but need a design</p>
+						<br />
+						<p>Your coders can't design anything (doesn't expect them too), so it's up to you!</p>
+						<br />
+						<p>Give it a whirl!</p>
+					</section>
+					<section>
+						<quote>
+							This can't be hard
+						</quote>
+						<p><small>- Yourself 3 hours ago</small></p>
+					</section>
+					<section>
+						<img src="./img/BadDesign1.png" />
+					</section>
+					<section>
+						<img src="./img/BadDesign2.png" />
+					</section>
+					<section>
+						<img src="./img/BadDesign3.png" />
+					</section>
+				</section>
+				<section>
+					<h2>Why and I so terrible?</h2>
+					<p>Design is not in the blood as most people think</p>
+					<br />
+					<p>Being a good designer involves knowing the fundamentals of design.</p>
+					<br />
+					<p>Coders have standards, and design is the exact same way.</p>
+				</section>
+				<section>
+					<section>
+						<h1>So what is Design?</h1>
+					</section>
+					<section>
+						<h2>Terminology</h2>
+						<p>Design is essentially a communication tool for your audience.</p>
+						<br />
+						<p>You are wanting to tell them something, have them interact with something, and get them to the correct information or workflows.</p>
+					</section>
+					<section>
+						<h2>That means design is not independent</h2>
+						<p>What this means is that design never stands alone. Your product needs to have an objective or purpose.</p>
+						<br />
+						<p>You can't get a design down unless you know your subject.</p>
+					</section>
+					<section>
+						<quote>Content is King!</quote>
+						<p><small>- All Professional Designers, if asked at any point in time.</small></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>First Step!</h1>
+					</section>
+					<section>
+						<h2>Get your content down</h2>
+						<p>The first think you need to do get your main focus down</p>
+						<p>After that, make a list of every feature you want your app to have</p>
+					</section>
+					<section>
+						<h2>You don't have to be perfect</h2>
+						<p>This is your brainstorming phase</p>
+						<br />
+						<p>Don't think about priority or feasibility at this moment. We will get to that part later.</p>
+					</section>
+					<section>
+						<h2>Example</h2>
+						<p>I want to make an application that displays neighborhood data on a mapped display.</p>
+					</section>
+					<section>
+						<ul>
+							<li>I want to see all the crimes against society.</li>
+							<li>I want to see all the crimes against property.</li>
+							<li>I want to see properties that are legally abandoned.</li>
+							<li>I want to filter a neighborhoods addresses by their tax delinquency status.</li>
+							<li>I want to see all the dangerous buildings in a neighborhood.</li>
+							<li>I want to see all the problem renters in a neighborhood.</li>
+							<li>I want to see the demographics information in a neighborhood.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Information Architecture</h1>
+					</section>
+					<section>
+						<h2>Let's look at a normal dinner plate.</h2>
+						<p>You have three sections on a typical dinner plate:</p>
+						<ul>
+							<li>1 Meat or Protein Item</li>
+							<li>1 Grain</li>
+							<li>Section of Fruits & Veggies</li>
+						</ul>
+						<p><small>I know there are exceptions such as chicken stir fry where all is masked together, but that's the keyword (exceptions)</small></p>
+					</section>
+					<section>
+						<h2>Why the Separation?</h2>
+						<p>Humans can only digest so much at one time</p>
+						<p>Putting everything scrambled on the page illogically will drop your user retention rate.</p>
+					</section>
+					<section>
+						<h2>How this applies to you</h2>
+						<p>Now that you have your feature list, you need to group the features together in a way that makes sense for your user base.</p>
+						<br />
+						<p>This will essentially form what is known as the Information Architecture of your application - Logical grouping of features</p>
+						<br />
+						<p>This will greatly assist with navigation.</p>
+					</section>
+					<section>
+						<h2>How to implement it.</h2>
+						<ol>
+							<li>Write every feature on a flash card.</li>
+							<li>Group features that belong together, or sound like they belong together.</li>
+							<li>Once you have enough cards, give your group a one or two word name. If your have a name longer than this, your group is too broad.</li>
+							<li>Keep repeating until all of your cards are grouped.</li>
+							<li>For any ungroupable cards, reevaluate that feature to see if it fits in your app.</li>
+						</ol>
+					</section>
+					<section>
+						<h2>Example: Let's go back to the Neighborhood App.</h2>
+					</section>
+					<section>
+						<ul>
+							<li>I want to see all the crimes against society.</li>
+							<li>I want to see all the crimes against property.</li>
+							<li>I want to filter a neighborhoods addresses by their tax delinquency status.</li>
+							<li>I want to see all the dangerous buildings in a neighborhood as a vacant indicator.</li>
+							<li>I want to see all the problem renters in a neighborhood as a vacant indicator</li>
+							<li>I want to see the demographics information in a neighborhood.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Crime</h2>
+						<ul>
+							<li>I want to see all the crimes against society.</li>
+							<li>I want to see all the crimes against property.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Legally Abandoned.</h2>
+						<ul>
+							<li>I want to see properties that are legally abandoned.</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Vacant Indication.</h2>
+						<ul>
+							<li>I want to see all the dangerous buildings in a neighborhood as a vacant indicator.</li>
+							<li>I want to see all the problem renters in a neighborhood as a vacant indicator</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Census</h2>
+						<ul>
+							<li>I want to see the demographics information in a neighborhood.</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Time for Design Principles!</h1>
+						<p>It's a load of crap!</p>
+					</section>
+					<section>
+						<quote>I mean, it seriously is.</quote>
+						<p><small>- Jake LaCombe, said while students wait for punchline on Sept 23, 2017.</small></p>
+					</section>
+					<section>
+						<img src="img/crap.png" />
+					</section>
+					<section>
+						<h2>Let's move on!</h2>
+						<p>Let's do Proximity first. It's the easiest.</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Proximity</h1>
+					</section>
+					<section>
+						<h2>Proximity Defined</h2>
+						<p>If things are alike, they should be grouped together.</p>
+					</section>
+					<section>
+						<h2>Examples</h2>
+						<img src="img/ign_proximity.png" />
+						<img src="img/apple_nav_proximity.png" />
+					</section>
+					<section>
+						<img src="img/udemy_proximity.png" />
+					</section>
+					<section>
+						<h2>Purpose</h2>
+						<p>Users will associated stuff together as being related.</p>
+						<br />
+						<p>Scattering items like nav all over the place makes it difficult to find what you need.</p>
+						<br />
+						<p>Likewise, stuff combined confuses the user as to what will occur.</p>
+					</section>
+					<section>
+						<p><a href="http://www.creativewithak.com/" target="_blank">Bad Example</a></p>
+					</section>
+					<section>
+						<h2>The Bad</h2>
+						<img src="img/bad_proximity.png" height="350" />
+					</section>
+					<section>
+						<h2>The Bad Fixed</h2>
+						<img src="img/bad_proximity_fixed.png" height="350" />
+					</section>
+					<section>
+						<h2>Simple Bad</h2>
+						<ul>
+							<li>Math CD’s</li>
+							<li>Algebra</li>
+							<li>English</li>
+							<li>Shakespeare</li>
+							<li>Theory of Evolution</li>
+							<li>Solar System</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Simple Bad Fixed</h2>
+						<ul class="nested-list">
+							<li>
+								<h3>Math</h3>
+								<ul>
+									<li>Math CD’s</li>
+									<li>Algebra</li>
+								</ul>
+							</li>
+							<li>
+								<h3>Language Arts</h3>
+								<ul>
+									<li>English</li>
+									<li>Shakespeare</li>
+								</ul>
+							<li>
+								<h3>Science</h3>
+								<ul>
+									<li>Theory of Evolution</li>
+									<li>Solar System</li>
+								</ul>
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Alignment</h1>
+					</section>
+					<section>
+						<h2>Alignment Defined</h2>
+						<p>Elements should be properly positioned. Things should not be arbritrarily placed on a page.</p>
+					</section>
+					<section>
+						<pre>
+							The fox is big
+    			The fox jumped over the hole.
+   T   h		e    t u r t          l        e         sprinted           to     the      		   river
+ 					Then
+ 		the
+
+				hare
+				
+						ran back to it’s cabbage   	in 			the  woods
+
+						</pre>
+					</section>
+					<section>
+						<pre>
+The fox is big
+The fox jumped over the hole.
+The turtle sprinted to the River
+Then the hare ran back to it’s cabbage in the woods
+						</pre>
+					</section>
+					<section>
+						<img src="img/airbnb_alignment.png" />
+					</section>
+					<section>
+						<h2>More Good!</h2>
+						<p><a href="https://www.smashingmagazine.com/" target="_blank">Smashing Magazine</a></p>
+						<p><a href="https://www.gamespot.com/" target="_blank">GameSpot</a></p>
+					</section>
+					<section>
+						<h2>...And some bad</h2>
+						<p><a href="http://www.arngren.net/" target="_blank">Arngren</a></p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h2>Repetition</h2>
+						<ul>
+							<li>Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Repetition Defined</h2>
+						<p>Once you defined how something works, reuse it.</p>
+					</section>
+					<section>
+						<img src="img/udemy_proximity.png" />
+					</section>
+					<section>
+						<img src="img/amazon_repetition.png" />
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Contrast</h1>
+					</section>
+					<section>
+						<h1>Contrast Defined</h1>
+						<p>If things are different, show it. Let the user know.</p>
+					</section>
+					<section>
+						<img src="img/contrast_square.png" />
+					</section>
+					<section>
+						<h2>Contrast Examples</h2>
+						<img src="img/contrast_1.png" />
+					</section>
+					<section>
+						<h2>Contrast by Fonts</h2>
+						<img src="img/contrast_2.png" />
+					</section>
+					<section>
+						<h2>Contrast by White Space</h2>
+						<p>Subtitle of Post</p>
+						<br />
+						<br />
+						<p>First Paragraph</p>
+						<p>Second Paragraph of text.</p>
+					</section>
+					<section>
+						<h2>Contrast by Color</h2>
+						<img src="img/contrast_by_color.png" />
+					</section>
+				</section>
 			</div>
 		</div>
 
